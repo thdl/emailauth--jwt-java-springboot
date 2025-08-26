@@ -14,6 +14,8 @@ import javax.security.auth.login.AccountException;
 
 @RequestMapping("/auth")
 @RestController
+// Now works without no-cors
+@CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")
 public class AuthenticationController {
     private final JwtService jwtService;
     private final AutheticationService autheticationService;
